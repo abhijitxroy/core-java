@@ -29,3 +29,9 @@ map vs flatMap
 
 <img width="1248" alt="image" src="https://github.com/abhijitxroy/core-java/assets/161963891/d125d5ec-d7b4-4d7c-bacf-99ee182e437a">
 
+
+Optional
+-
+
+<img width="903" alt="image" src="https://github.com/abhijitxroy/core-java/assets/161963891/09c7b8f9-6f47-471e-9a4a-a0ba3fe5b1c8">
+
