@@ -19,12 +19,12 @@ public class OptionalDemo {
         System.out.println(emptyOptional);
 
         // 2. of => throw null if exist null
-        // Optional<String> smithOfOptional = Optional.of(smithCustomer.getEmail());
-        // System.out.println(smithOfOptional);
+        Optional<String> smithOfOptional = Optional.of(smithCustomer.getEmail());
+        System.out.println(smithOfOptional);
 
         // 3. ofNullable => 
-        // Optional<String> smithOfNullableOptional = Optional.ofNullable(smithCustomer.getEmail());
-        // System.out.println(smithOfNullableOptional);
+        Optional<String> smithOfNullableOptional = Optional.ofNullable(smithCustomer.getEmail());
+        System.out.println(smithOfNullableOptional);
 
         // Optional :: isPresent => get() || orElse throw exception || orElse provide a default value
         Optional<String> smithOfNullableOptional2 = Optional.ofNullable(smithCustomer.getEmail());
