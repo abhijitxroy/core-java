@@ -29,6 +29,16 @@ map vs flatMap
 
 <img width="1248" alt="image" src="https://github.com/abhijitxroy/core-java/assets/161963891/d125d5ec-d7b4-4d7c-bacf-99ee182e437a">
 
+Reduce
+-
+
+<img width="1389" alt="image" src="https://github.com/abhijitxroy/core-java/assets/161963891/d5ee5f79-0c5a-4650-bca4-6dec81b5c4dd">
+
+<img width="973" alt="image" src="https://github.com/abhijitxroy/core-java/assets/161963891/986b2238-45a0-46df-bccb-98c8ea1c5067">
+
+- Realtime Example - [Employee - salary]
+<img width="989" alt="image" src="https://github.com/abhijitxroy/core-java/assets/161963891/e892f8cc-28f9-40d8-b572-83271b67bec2">
+
 
 Optional
 -
