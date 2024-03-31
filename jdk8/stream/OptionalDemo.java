@@ -1,8 +1,8 @@
 import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
-
-import javax.swing.text.html.Option;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class OptionalDemo {
      public static void main(String[] args) {
@@ -19,14 +19,13 @@ public class OptionalDemo {
         System.out.println(emptyOptional);
 
         // 2. of => throw null if exist null
-        Optional<String> smithOfOptional = Optional.of(smithCustomer.getEmail());
-        System.out.println(smithOfOptional);
+        // Optional<String> smithOfOptional = Optional.of(smithCustomer.getEmail());
+        // System.out.println(smithOfOptional);
 
         // 3. ofNullable => 
-        Optional<String> smithOfNullableOptional = Optional.ofNullable(smithCustomer.getEmail());
-        System.out.println(smithOfNullableOptional);
+        // Optional<String> smithOfNullableOptional = Optional.ofNullable(smithCustomer.getEmail());
+        // System.out.println(smithOfNullableOptional);
 
-        // Optional popular Methods
         // Optional :: isPresent => get() || orElse throw exception || orElse provide a default value
         Optional<String> smithOfNullableOptional2 = Optional.ofNullable(smithCustomer.getEmail());
         if(smithOfNullableOptional2.isPresent()){
@@ -35,13 +34,36 @@ public class OptionalDemo {
         // else {
         //     System.out.println(smithOfNullableOptional2.orElseThrow(() -> new IllegalArgumentException("Null received!")));
         // }
-          
+
         // OR 
         else{
             System.out.println(smithOfNullableOptional2.orElse("null@email.com"));
         }
-        
+
+        // Example - find the the customer details by email id
+        Customer resultCustomer  = getCustomerByEmailId("john@email.com");
+        System.out.println("Resultant customer: " + resultCustomer);
      }
+
+     private static Customer getCustomerByEmailId(String email){
+        List<Customer> list = EkartDatabase.getAllCustomers();
+        return list.stream()
+                    .filter(c -> c.getEmail().equals(email))
+                    .findAny()
+                    .orElseThrow(() -> new RuntimeException("Customer not found!"));
+     }
+}
+
+class EkartDatabase{
+    public static List<Customer> getAllCustomers(){
+        return Stream.of(
+            new Customer(101, "john", "john@email.com", Arrays.asList("12345", "67890")),
+            new Customer(101, "smith", "smith@email.com", Arrays.asList("23456", "78901")),
+            new Customer(101, "peter", "peter@email.com", Arrays.asList("34567", "89012")),
+            new Customer(101, "kely", "kely@email.com", Arrays.asList("45678", "90123")),
+            new Customer(101, "oliver", "oliver@email.com", Arrays.asList("56789", "01234"))
+        ).collect(Collectors.toList());
+    }
 }
 
 class Customer {
@@ -83,5 +105,5 @@ class Customer {
     @Override
     public String toString() {
         return "Customer [id=" + id + ", name=" + name + ", email=" + email + ", phone=" + phone + "]";
-    }        
+    }       
 }
