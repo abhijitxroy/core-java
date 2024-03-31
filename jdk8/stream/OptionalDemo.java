@@ -93,6 +93,10 @@ class Customer {
     public String getEmail() {
         return email;
     }
+    // Recommended one
+    // public Optional<String> getEmail(){
+    //     return Optional.ofNullable(email);
+    // }
     public void setEmail(String email) {
         this.email = email;
     }
