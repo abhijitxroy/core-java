@@ -51,3 +51,5 @@ Parallel Stream
 
 <img width="1492" alt="image" src="https://github.com/abhijitxroy/core-java/assets/161963891/9763b83c-72f8-429a-9b23-eb01068160f9">
 
+<img width="1492" alt="image" src="https://github.com/abhijitxroy/core-java/assets/161963891/b74be403-0414-496e-ad5c-d6d63a5f2422">
+
