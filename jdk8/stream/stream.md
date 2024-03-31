@@ -45,3 +45,9 @@ Optional
 
 <img width="903" alt="image" src="https://github.com/abhijitxroy/core-java/assets/161963891/09c7b8f9-6f47-471e-9a4a-a0ba3fe5b1c8">
 
+
+Parallel Stream
+-
+
+<img width="1492" alt="image" src="https://github.com/abhijitxroy/core-java/assets/161963891/9763b83c-72f8-429a-9b23-eb01068160f9">
+
